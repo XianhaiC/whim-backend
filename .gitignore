@@ -54,9 +54,6 @@ bower.json
 # Ignore Byebug command history file.
 .byebug_history
 
-# Ignore node_modules
-node_modules/
-
 # Ignore precompiled javascript packs
 /public/packs
 /public/packs-test
