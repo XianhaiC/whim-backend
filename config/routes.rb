@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     get '/sparks/:id/messages', to: 'sparks#messages'
     get '/impulses/:id/messages', to: 'impulses#messages'
     get '/impulses/:id/sparks', to: 'impulses#sparks'
-    post '/session', to: 'sessions#session'
+    post '/session', to: 'sessions#session_data'
     get '/threads/:id/messages', to: 'message_threads#load'
 
     # session routes

@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :authenticate_session, only: [:session_sparks]
+  before_action :authenticate_session, only: [:session_data]
   def new
   end
 
@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
     render json: { auth_token: tok }
   end
 
-  def session
+  def session_data
     sparks = Spark.where(session_token: params[:session_token]).to_a
     session_spark_ids = sparks.map {|spark| spark.id}
     impulses = sparks.map { |spark| spark.impulse }
